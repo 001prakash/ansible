@@ -1,10 +1,6 @@
 ---
-- hosts: all
-  become: yes
-  gather_facts: yes
-  tasks:
-  - name: des i am going install git on all nodes
-    apt:
-      name: git 
-      state: absent
+- name: des i am going install git on all nodes
+  yum:
+    name: git 
+    state: absent
       
