@@ -1,0 +1,27 @@
+---
+
+- name: Checkout git repository to specified folder
+
+  git:
+
+    repo: ' https://github.com/001prakash/privatescript-code.git'
+
+    dest: /home/docker/
+
+
+
+- name: Change the working directory to home/centos/docker before executing the command.
+
+  shell: my-script.sh
+
+  args:
+
+    chdir: /home/docker/#!/bin 
+
+
+
+- name: Check that you can connect (GET) to a page and it returns a status 200
+
+  uri:
+
+    url: http://{{ ansible_default_ipv4.address }}:5822/
